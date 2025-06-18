@@ -16,6 +16,11 @@ route::get('/index', function () {
 //rota delete
 Route::delete('/contatos/{contatoId}', [ContatosController::class, 'delete'])->name('contatos.delete');
 
+//rota create get (mostra a view de criação)
+Route::get('/contatos/create', [ContatosController::class, 'create'])->name('contatos.create.get');
+//rota create post (adiciona o contato)
+Route::post('/contatos/create', [ContatosController::class, 'create'])->name('contatos.create.post');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -19,4 +19,16 @@ class ContatosController extends Controller
        $buscaRegistro->delete();
        return back();
     }
+
+    public function create(Request $request)
+    {
+
+        //Retornando a view de criação de contatos
+        if ($request->method() == "POST") {
+            $data = $request->all();
+            Contatos::create($data);
+            return redirect('/contatos');
+        }
+        return view('pages.contatos.create');
+    }
 }

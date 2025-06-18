@@ -2,15 +2,14 @@
  
  
 @section('content')
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"></div>
- 
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 <h1 class="h1">Contacts</h1>
- 
+</div>
 <div>
     <form action="" method="GET">
         <input type="text" name="pesquisar" placeholder="Digite para buscar">
         <button>Pesquisar</button>
-        <a type="button" href="" class="btn btn-success float-end">
+        <a type="button" href="{{ route('contatos.create.get') }}" class="btn btn-success float-end">
             Incluir
         </a>
     </form>
